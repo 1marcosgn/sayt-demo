@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F470DA820926BDF00EA7258 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F470DA720926BDF00EA7258 /* Constants.swift */; };
 		7F7973A12081AF880041ED98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7973A02081AF880041ED98 /* AppDelegate.swift */; };
 		7F7973A62081AF880041ED98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F7973A42081AF880041ED98 /* Main.storyboard */; };
 		7F7973A82081AF880041ED98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F7973A72081AF880041ED98 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F470DA720926BDF00EA7258 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7F79739D2081AF880041ED98 /* CF Comps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CF Comps.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F7973A02081AF880041ED98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F7973A52081AF880041ED98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F470DA520926B8900EA7258 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7F470DA720926BDF00EA7258 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		7F7973942081AF880041ED98 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +78,7 @@
 		7F79739F2081AF880041ED98 /* CF Comps */ = {
 			isa = PBXGroup;
 			children = (
+				7F470DA520926B8900EA7258 /* Utils */,
 				7F7973B82081B7F00041ED98 /* UI */,
 				7F7973B52081B34C0041ED98 /* Controllers */,
 				7F7973B22081AFA50041ED98 /* Models */,
@@ -188,6 +199,7 @@
 				7F7973A12081AF880041ED98 /* AppDelegate.swift in Sources */,
 				7FA094DE20892A2400321954 /* CFDetailTableViewController.swift in Sources */,
 				7F7973BB2081B8710041ED98 /* CFCompCell.swift in Sources */,
+				7F470DA820926BDF00EA7258 /* Constants.swift in Sources */,
 				7FA094E22089614200321954 /* CFBannerView.swift in Sources */,
 				7F7973B42081B00A0041ED98 /* CFCompetition.swift in Sources */,
 			);

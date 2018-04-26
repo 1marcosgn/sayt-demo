@@ -2,7 +2,7 @@
 //  CFCompetition.swift
 //  CF Comps
 //
-//  Created by marcosgn1 on 4/13/18.
+//  Created by Marcos Garcia on 4/13/18.
 //  Copyright © 2018 Marcos G. All rights reserved.
 //
 //  Data model to handle the Crossfit Competitions

@@ -2,7 +2,7 @@
 //  CFBannerView.swift
 //  CF Comps
 //
-//  Created by marcosgn1 on 4/19/18.
+//  Created by Marcos Garcia on 4/19/18.
 //  Copyright © 2018 Marcos G. All rights reserved.
 //
 

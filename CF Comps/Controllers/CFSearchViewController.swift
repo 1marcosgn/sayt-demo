@@ -2,7 +2,7 @@
 //  CFSearchViewController.swift
 //  CF Comps
 //
-//  Created by marcosgn1 on 4/13/18.
+//  Created by Marcos Garcia on 4/13/18.
 //  Copyright © 2018 Marcos G. All rights reserved.
 //
 
@@ -13,21 +13,11 @@ class CFSearchViewController: UITableViewController {
     var competitions: [CFCompetition] = []
     let searchController = UISearchController(searchResultsController: nil)
     var filteredComps = [CFCompetition]()
-    
-    struct Constants {
-        static let kRowHeight: CGFloat = 78.0
-        static let kSections = 1
-        static let kCellNibName = "CFCompCell"
-        static let kSearchPlaceHolder = "Search Competitions"
-        static let kScope = "All"
-        static let kCFDetailView = "CFDetailTableViewController"
-        static let kFooterHeight: CGFloat = 64.0
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         //Register reusable cell
-        tableView.register(UINib(nibName: Constants.kCellNibName, bundle: nil), forCellReuseIdentifier: Constants.kCellNibName)
+        tableView.register(UINib(nibName: CFConstants.kCellNibName, bundle: nil), forCellReuseIdentifier: CFConstants.kCellNibName)
         
         //Setup SearchController
         self.setUpSearchController()
@@ -42,7 +32,7 @@ class CFSearchViewController: UITableViewController {
     func setUpSearchController() {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = Constants.kSearchPlaceHolder
+        searchController.searchBar.placeholder = CFConstants.kSearchPlaceHolder
         navigationItem.searchController = searchController
         definesPresentationContext = true
     }
@@ -65,7 +55,7 @@ class CFSearchViewController: UITableViewController {
     }
     
     /// Filters the 'competitions' array based on searchText and will put the results in the 'filteredComps' array
-    func filterContentForSearchText(_ searchText: String, scope: String = Constants.kScope) {
+    func filterContentForSearchText(_ searchText: String, scope: String = CFConstants.kScope) {
         filteredComps = competitions.filter({ (competition: CFCompetition) -> Bool in
             return competition.style.rawValue.lowercased().contains(searchText.lowercased()) || competition.name.lowercased().contains(searchText.lowercased())
         })
@@ -83,7 +73,7 @@ class CFSearchViewController: UITableViewController {
 
     // MARK: - Table view Delegates
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.kCellNibName) as! CFCompCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CFConstants.kCellNibName) as! CFCompCell
         let competition: CFCompetition
         
         if isFiltering() {
@@ -107,13 +97,13 @@ class CFSearchViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //Detail View Controller
-        let detailVC = CFDetailTableViewController(nibName: Constants.kCFDetailView, bundle: Bundle.main)
+        let detailVC = CFDetailTableViewController(nibName: CFConstants.kCFDetailView, bundle: Bundle.main)
         navigationController?.pushViewController(detailVC, animated: true)
     }
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return Constants.kSections
+        return CFConstants.kSections
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -124,7 +114,7 @@ class CFSearchViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return Constants.kRowHeight
+        return CFConstants.kRowHeight
     }
 
 }
